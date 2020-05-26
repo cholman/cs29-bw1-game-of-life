@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="./js/p5.js"></script>
+    <script src="./js/gameoflife.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <h1>Conway's Game of Life</h1>
+    <div>
+      <div class="canvas">
+        <canvas> </canvas>
+      </div>
+      <div class="rules">
+        <h2>The Rules</h2>
+        <ul>
+          <li>For a space that is 'populated':</li>
+          <li>Each cell with one or no neighbors dies, as if by solitude.</li>
+          <li>
+            Each cell with four or more neighbors dies, as if by overpopulation.
+          </li>
+          <li>Each cell with two or three neighbors survives.</li>
+          <li>For a space that is 'empty' or 'unpopulated'</li>
+          <li>Each cell with three neighbors becomes populated.</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <h3>About</h3>
+      <p>Conway's Game of Life</p>
+    </div>
+
+    <script src="js/main.js" async defer></script>
+  </body>
+</html>
