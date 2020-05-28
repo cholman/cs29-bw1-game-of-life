@@ -22,7 +22,9 @@
         <a href="#">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
-    <h1>Conway's Game of Life</h1>
+    <header>
+      <h1>Conway's Game of Life</h1>
+    </header>
     <div>
       <div class="game">
         <div id="canvas">
@@ -30,7 +32,15 @@
         <div class="buttons">
           <div id="start"></div>
           <div id="pause"></div>
+          <div id="resume"></div>
           <div id="stop"></div>
+          <div id="clear"></div>
+          <div id="nextframe"></div>
+          <div id="slider"></div>
+        </div>
+        <div>
+          <div id="sizeup"> </div>
+          <div id="sizedown"> </div>
         </div>
       </div>
       <div class="rules">
@@ -47,9 +57,10 @@
         </ul>
       </div>
     </div>
-    <div>
-      <h3>About</h3>
-      <p>Conway's Game of Life</p>
+    <div class="about">
+      <h3>About Conway's Game of Life</h3>
+      <p>John Horton Conway devised this cellular automaton in 1970. It is a zero player game, determined by it's initial state. The Game of Life is said to be Turing complete.</p>
+      <p>Turing Complete means that it must be able to do everything a Turing machine can do. The ability to read and write ones and zeros to an infinite length of tape is enough to compute <i>anything.</i></p>
     </div>
 
     <script src="js/main.js" async defer></script>

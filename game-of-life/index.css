@@ -1,10 +1,19 @@
 *{
     box-sizing: border-box;
   }
+  body{
+    margin: 0, auto;
+    max-width: 1000;
+    border: 1px solid red;
+  }
   body div{
     width: 100%;
     display: flex;
-    border: 1px solid green;
+    /* border: 1px solid green; */
+  }
+  header{
+    display: flex;
+    justify-content: center;
   }
   .game{
     display: flex;
@@ -12,24 +21,29 @@
   }
   .buttons{
     height: 30px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    width: 400px;
   }
   #start{
-    height: 25px;
-    display: flex;
-    align-content: center;
+    
   }
   #canvas{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
   }
   
   .rules{
     width: 50%;
     height: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
   }
   .rules ul{
     text-align: left;
   }
+.about{
+  display: inline-block;
+}
+.about h3{
+  text-align: center;
+}
