@@ -3,14 +3,24 @@
   }
   body div{
     width: 100%;
-    height: 50vh;
     display: flex;
     border: 1px solid green;
   }
-  .canvas{
-    width: 50%;
-    height: 100%;
-    border: 1px solid white;
+  .game{
+    display: flex;
+    flex-direction: column;
+  }
+  .buttons{
+    height: 30px;
+    border: 1px solid red;
+  }
+  #start{
+    height: 25px;
+    display: flex;
+    align-content: center;
+  }
+  #canvas{
+    border: 1px solid blue;
   }
   
   .rules{
@@ -22,7 +32,4 @@
   }
   .rules ul{
     text-align: left;
-  }
-  canvas{
-    border: 1px solid blue;
   }
