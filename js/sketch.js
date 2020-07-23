@@ -9,12 +9,13 @@ let grid;
 let res = 20;
 let cols;
 let rows;
-let canvasSize = 400;
+let canvasSize = 500;
 let alive = 255;
 let dead = 0;
 let simulate = 0;
 let play = false;
-let fps = 60;
+let fps = 30;
+let generations = 0;
 function setup() {
   // put setup code here
   
@@ -37,7 +38,7 @@ function setup() {
   stop.parent('stop');
   stop.mousePressed(clearGrid);
 
-  let nextFrame = createButton('Next Frame');
+  let nextFrame = createButton('NextGen');
   nextFrame.parent('nextframe');
   nextFrame.mousePressed(skipFrame);
 
@@ -83,6 +84,7 @@ function resetSketch() {
   rows = height / res;
   loop();
   frameRate(fps);
+  generations = 0;
   grid = make2DArray(cols, rows);
   for (let i = 0; i < cols; i++){
     for (let j = 0; j < rows; j++){
@@ -98,6 +100,7 @@ function clearGrid() {
   loop();
   frameRate(fps);
   simulate = 0;
+  generations = 0;
   grid = make2DArray(cols, rows);
   for (let i = 0; i < cols; i++){
     for (let j = 0; j < rows; j++){
@@ -144,6 +147,7 @@ function pauseGame() {
 // }
 function startSim() {
   simulate = 1;
+  play = 1;
   frameRate(fps);
   loop();
 }
@@ -164,7 +168,11 @@ function mousePressed() {
 }
 }
 function draw() {
+  
+
   background(255);
+  
+  
   if(simulate == 0){
     for (let i = 0; i < cols; i++){
       for (let j = 0; j < rows; j++){
@@ -182,6 +190,7 @@ function draw() {
 }
 
   else if(simulate == 1){
+    generations += 1;
   for (let i = 0; i < cols; i++){
     for (let j = 0; j < rows; j++){
       let x = i * res;
@@ -224,7 +233,12 @@ function draw() {
   }
 
 grid = next;
+
 }
+textSize(32);
+  fill(0, 102, 152);
+  text(generations, 350, 450);
+  textAlign(CENTER, CENTER);
 }
 
 function countNeighbors(grid, x, y) {
@@ -237,5 +251,6 @@ function countNeighbors(grid, x, y) {
     }
   }
   sum -= grid[x][y];
+  
   return sum;
 }
